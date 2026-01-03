@@ -1,0 +1,187 @@
+LESSION 1 : BASICS OF SPRINGBOOT
+=================================
+
+
+* in Java, there were some technologies for develope web application like EJB, Struts.
+
+    * core Java - (Java Standard Edition)
+    * advance Java - ( Java Enterprise Edition )
+
+
+    JAR
+    ---
+
+    * JAR is Java ARchieve file. which contains lots of java class files. 
+    * when you install jdk, behind there are java class file for run simple program. 
+    * this is core java.
+
+
+    WAR
+    ---
+
+    * WAR is Web ARchieve file. which contains Java files, HTML files, CSS files, JS files.
+    * usually WAR is used when website is developed.
+
+* Spring integrates with all other frameworks like Hibernate, Struts.
+    
+    spring can connect with hibernate application or struts application. so that spring is popular.
+
+
+Spring Features :
+
+    * POJO classes (Plain Old Java Objects) - having getters and setters methods.
+    * Dependency Injection
+    * REST API
+    * MVC
+    * Security
+
+
+MVC pattern
+-----------
+
+Model View Controller.
+
+    1) view       - view is the UI page. where user sends the request and where user received the response.
+    2) controller - controller is the request receiver in backend and send the request to model to process. controller is the one who interacts to both.
+    3) model      - model where the business is happen and communicate  to the db and sends back the data to controller.
+
+        * model comprises of service(business logic), repository(db) and entity(data structure).
+
+
+REST API
+--------
+
+API - Application Programming Interface.
+
+* REST isn’t just about URLs and JSON. It’s about designing APIs that are simple, scalable, stateless, and predictable.
+
+6 KEY PRINCIPLES OF REST API
+---------------------------
+
+1) Client-Server Architecture
+
+    * the client and server should be seperate. both doesn't need to know each other.
+
+2) Stateless
+
+    * the server doesn't store session information between requests.
+
+3) Cacheable
+
+    * responses from the server should be cached to improve performance. the request doesn't need to hit the db each time.
+
+4) Uniform Interface
+
+    * should use standard http methods. like GET, POST, PUT, DELETE.
+
+5) Layered System
+
+    * the architecture can have layers. so client talk to API, not to the database.
+
+6) Code On Demand (Optional)
+
+    * the server can send code to the client to extend functionality. like JSP and thymeleaf files to browser to run.
+
+HTTP Methods
+------------
+
+GET     - used to get the information.
+POST    - used to insert the information into db.
+PUT     - used to update the information in db.
+DELETE  - used to delete something in db.
+PATCH   - used to delete but used partially. if wanted to update specific data or column.
+
+
+
+HTTP Status Code
+----------------
+
+1xx - Informational
+
+2xx → Success
+
+3xx → Redirection
+
+4xx → Client mistake
+
+5xx → Server mistake
+
+
+
+100     - Continue, complete request is not received by server yet.
+101     - Switching Protocols, the servers agrees to switch protocols.
+
+200     - SUCCESS , request is succeeded. server processed it successfully. usually used in GET method when data fetched or update/delete worked.
+201     - CREATED , resource successfully created. usually used in POST.
+202     - ACCEPTED, request is accepted but not yet processed.
+204     - NO CONTENT, request is processed but no content to return.
+
+301     - MOVED PERMANENTLY 
+302     - FOUND
+303     - NOT MODIFIED
+
+400     - BAD REQUEST
+401     - UNAUTHORIZED
+403     - FORBIDDEN
+404     - NOT FOUND
+405     - METHOD NOT ALLOWED
+
+500     - INTERNAL SERVER ERROR
+501     - NOT IMPLEMENTED
+502     - BAD GATEWAY
+503     - SERVICE UNAVAILABLE
+504     - GATEWAY TIMEOUT
+
+
+
+========================================================================================================================================================================
+
+LESSION 2 - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
