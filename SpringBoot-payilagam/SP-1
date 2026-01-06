@@ -315,14 +315,57 @@ LESSION 4 - Servlet and JSP.
 
 LESSION 5 - SPRING MVC
 
-* Frontend controller is 'Dispatcher Servlet'.
+* Frontend controller is 'Dispatcher Servlet' in spring mvc.
+
+* DispatcherServlet is provided by spring framework. thats why its called it is framework servlet.
+
+
+Spring MVC components
+---------------------
+
+1) front controller (DispatcherServlet)
+2) Handler Mapper
+3) Controller
+4) Model and View
+5) View Resolver
+6) view
+
+* spring mvc module is developed based on 2 design pattern
+
+    a) MVC design pattern
+    b) front controller design pattern
+
+
+* front controller is responsible for pre processing and post processing. 
 
 
 
+Request Execution flow in Spring Application
+--------------------------------------------
+
+1) Incoming Http request will be received by DispatcherServlet. DS is a predefined in spring mvc and it is acting as front controller.
+2) DispacherServlet will send requested URL to HandlerMapper.
+3) HandlerMapper will identify request handler which is responsible to handle this request and will send request handler details to DispatcherServlet.
+4) DispatcherSevlet will call respective Controller class method.
+5) Controller method will process request and will send ModelandView object to DispatcherServlet
+
+        Model   -   Data
+        View    -   Logical file name
+
+6) DispatcherServlet will send view name to ViewResolver.
+7) ViewResolver will identify view location & extension and sends data to DS.
+8) DS will give model and view details to view component.
+9) model data will be rendered on view sends back to DS.
+10) DS will send response back to browser for received request.
 
 
 
+    Q) why MVC(model and view) is not recommended today ?
 
+        * REST API overcomes that approach, and rest is stateless.
+
+        * MVC renders HTML and Thymeleaf, so these are tightly coupled.
+        * REST is using JSON/XML data format. UI rendering is being taken by frontend tech like react/angular.
 
 
 
